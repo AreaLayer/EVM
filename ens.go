@@ -165,7 +165,7 @@ func (ens *ENS) SetAddr(name string, addr common.Address) (*types.Transaction, e
 		return nil, err
 	}
 	opts := ens.TransactOpts
-	opts.GasLimit = 200000
+	opts.GasLimit = 100000
 	return resolver.Contract.SetAddr(&opts, node, addr)
 }
 
@@ -190,6 +190,6 @@ func (ens *ENS) SetContentHash(name string, hash common.Hash) (*types.Transactio
 		return nil, err
 	}
 	opts := ens.TransactOpts
-	opts.GasLimit = 200000
+	opts.GasLimit = 100000
 	return resolver.Contract.SetContent(&opts, node, hash)
 }
