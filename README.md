@@ -14,9 +14,9 @@ Making smart Contracts happen on Bitcoin.
 
 -Security by Bitcoin(Layer One)
 
-- UTXO (without spending double)
+-UTXO (without spending double)
 
-- HTLC (Transactions in timechain)
+ -HTLC (Transactions in timechain)
 
 
 # Swarm ENS interface
