@@ -82,6 +82,8 @@ type rpcBlock struct {
 	Hash         common.Hash      `json:"hash"`
 	Transactions []rpcTransaction `json:"transactions"`
 	UncleHashes  []common.Hash    `json:"uncles"`
+	Invoice      []common.Invoice 'json."Invoice"
+	UTXO         []common.UTXO     'json."UTXO"
 }
 
 func (ec *Client) getBlock(ctx context.Context, method string, args ...interface{}) (*types.Block, error) {
