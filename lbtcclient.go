@@ -82,8 +82,8 @@ type rpcBlock struct {
 	Hash         common.Hash      `json:"hash"`
 	Transactions []rpcTransaction `json:"transactions"`
 	UncleHashes  []common.Hash    `json:"uncles"`
-	Invoice      []common.Invoice 'json."Invoice"
-	UTXO         []common.UTXO     'json."UTXO"
+	Invoice      []common.Invoice 'json."Invoice"'
+	UTXO         []common.UTXO     'json."UTXO"'
 }
 
 func (ec *Client) getBlock(ctx context.Context, method string, args ...interface{}) (*types.Block, error) {
@@ -306,6 +306,10 @@ func (ec *Client) SyncProgress(ctx context.Context) (*ethereum.SyncProgress, err
 		HighestBlock:  uint64(progress.HighestBlock),
 		PulledStates:  uint64(progress.PulledStates),
 		KnownStates:   uint64(progress.KnownStates),
+		InvoiceStates: unit64(progress.InvoiceStates),
+		InoivceBlock:  unit64(progress.InvoiceBlock),
+		UTXOStates:     uint64(progress.UTXOStates),
+		
 	}, nil
 }
 
